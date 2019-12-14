@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>blog_test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    div#wenzi {
+      word-break: break-all;
+    }
+
+    div#taiji {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    div#taiji::before,
+    div#taiji::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    @media (max-width:500px) {
+      div#wenzi {
+        height: 50vh;
+        overflow: auto;
+      }
+
+      div#wrapper {
+        height: 50vh;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      div#taiji {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wenzi"></div>
+  <div id="wrapper">
+    <div id="taiji"></div>
+  </div>
+  <style id="sty1"></style>
+  <script src="main.js"></script>
+</body>
+
+</html>
